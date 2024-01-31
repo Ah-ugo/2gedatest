@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export default function RightSider() {
   const navigate = useNavigate();
   return (
-    <div className="bg-white px-4 mt-12 py-2 h-full" style={{ width: "100%" }}>
+    <div className="bg-white px-4 py-2 h-full" style={{ width: "100%" }}>
       <button
         onClick={() => navigate("/sellItem")}
         className="pl-2 w-full flex items-start"

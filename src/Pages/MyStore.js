@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { Grid } from "@mui/material";
 import ProductCard from "../Component/ProductCard";
 
-export default function Category() {
+export default function MyStore() {
   return (
     <MainLayout>
       <Mainbody>
@@ -37,7 +37,7 @@ export default function Category() {
                   />
                 </svg>
                 <span className="text-black text-opacity-80 text-2xl font-medium font-['Ubuntu']">
-                  Automobiles
+                  My store
                 </span>
               </div>
               <div className="hidden space-x-3 items-end md:flex">

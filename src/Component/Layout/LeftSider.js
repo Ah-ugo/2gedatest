@@ -6,8 +6,8 @@ export default function LeftSider() {
   return (
     <div
       style={{ backgroundColor: "#4F0DA3", color: "white" }}
-      className="h-full">
-      <main>
+      className="h-full ">
+      <main className="">
         {/* <div class="min-h-screen flex flex-row bg-gray-100"> */}
         <div class="flex flex-col w-full overflow-hidden h-screen">
           <ul class="flex flex-col py-4" style={{ marginTop: 83.56 }}>

@@ -11,7 +11,7 @@ export default function Home() {
     // <div>
     <MainLayout>
       <Mainbody>
-        <div style={{ marginLeft: 29, marginRight: 29, marginTop: 26 }}>
+        <div style={{ marginLeft: 29, marginRight: 29, marginTop: 0 }}>
           <div
             className="flex justify-between items-center align-middle"
             style={{ marginBottom: 22 }}>

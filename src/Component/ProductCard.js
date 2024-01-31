@@ -5,7 +5,7 @@ export default function ProductCard({ img, location, price, name }) {
     <div>
       <div className="w-28 h-auto">
         <img
-          className="w-28 h-24 left-0 top-0  rounded"
+          className="w-full h-24 left-0 top-0  rounded"
           src={img ? img : "https://via.placeholder.com/111x102"}
         />
         <div className="left-[1px] top-[110px] text-black text-opacity-60 text-xs font-medium font-['Ubuntu']">
