@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import LeftSider from "./LeftSider";
 
 export default function NavbarMobile() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
   return (
-    <header className="p-4">
+    <header className="p-4 bg-white fixed w-full z-10 top-0">
       <div className="container flex justify-between h-16 mx-auto">
         <div className="flex align-middle items-center">
-          <button className="flex justify-end p-4 md:hidden">
+          <button onClick={toggle} className="flex justify-start p-4 md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -68,6 +72,14 @@ export default function NavbarMobile() {
               d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button> */}
+      </div>
+      <div
+        className={`${
+          isOpen
+            ? "block absolute fixed z-1 top-full left-0 w-full md:hidden transition-all duration-300 ease-in-out transform translate-x-0 overflow-hidden"
+            : "hidden"
+        }`}>
+        <LeftSider />
       </div>
     </header>
   );
