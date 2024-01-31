@@ -4,8 +4,12 @@ import Mainbody from "../Component/Layout/Mainbody";
 import { CiSearch } from "react-icons/ci";
 import { Grid } from "@mui/material";
 import ProductCard from "../Component/ProductCard";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Category() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <MainLayout>
       <Mainbody>
@@ -65,98 +69,98 @@ export default function Category() {
 
             {/* product section */}
             <Grid container rowSpacing={2} columnSpacing={3} marginTop={"15px"}>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
@@ -173,205 +177,98 @@ export default function Category() {
                 </div>
               </Grid>
 
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot7.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                {/* banner */}
-                <div style={{ paddingTop: 24, paddingBottom: 24 }}>
-                  <img
-                    className="w-full h-28"
-                    src={require("../utils/assets/images/banner.jpeg")}
-                  />
-                </div>
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot1.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot2.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot3.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot4.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot5.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot6.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot7.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot1.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot2.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot3.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot4.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot5.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
-                <ProductCard
-                  img={require("../../src/utils/assets/images/hot6.jpeg")}
-                  name={"Semi detached duplex"}
-                  price={"#200,000"}
-                />
-              </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
@@ -387,98 +284,205 @@ export default function Category() {
                   />
                 </div>
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={1.7142857142857}>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot7.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                {/* banner */}
+                <div style={{ paddingTop: 24, paddingBottom: 24 }}>
+                  <img
+                    className="w-full h-28"
+                    src={require("../utils/assets/images/banner.jpeg")}
+                  />
+                </div>
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot1.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot2.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot3.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot4.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot5.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot6.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot7.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot1.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot2.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot3.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot4.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot5.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
+                <ProductCard
+                  img={require("../../src/utils/assets/images/hot6.jpeg")}
+                  name={"Semi detached duplex"}
+                  price={"#200,000"}
+                />
+              </Grid>
+              <Grid item xs={matches ? 1.7142857142857 : 6}>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}

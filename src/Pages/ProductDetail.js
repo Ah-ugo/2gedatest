@@ -5,22 +5,26 @@ import { CiSearch } from "react-icons/ci";
 import { Button, Grid } from "@mui/material";
 import ProductCard from "../Component/ProductCard";
 import ReviewsComponent from "../Component/ReviewsComponent";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function ProductDetail() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <MainLayout>
       <Mainbody>
         {/* <div></div> */}
         <div style={{ marginLeft: 16, marginRight: 16, paddingTop: 21 }}>
           <main
-            className="w-full bg-white flex justify-between align-center items-middle"
+            className="w-full bg-white flex justify-between align-center items-middle flex-row "
             style={{
               paddingLeft: 21,
               paddingRight: 21,
               paddingTop: 18,
               paddingBottom: 18,
             }}>
-            <div className="flex items-middle align-center gap-20">
+            <div className="flex items-middle align-center gap-10 md:gap-20">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -36,7 +40,7 @@ export default function ProductDetail() {
                   fill="black"
                 />
               </svg>
-              <div className="text-black text-opacity-80 text-2xl font-medium font-['Ubuntu']">
+              <div className="text-black text-opacity-80 text-xl font-medium font-['Ubuntu'] md:text-2xl">
                 Product details
               </div>
             </div>
@@ -56,7 +60,7 @@ export default function ProductDetail() {
           </main>
 
           <main
-            className="w-full h-auto bg-white flex align-center items-middle mt-1"
+            className="w-full h-auto bg-white flex flex-col align-center items-middle mt-1 md:flex-row"
             style={{
               paddingLeft: 21,
               paddingRight: 35,
@@ -67,7 +71,7 @@ export default function ProductDetail() {
             <div className="w-full">
               <img
                 src={require("../utils/assets/images/detailImgBanner.jpeg")}
-                className="w-full h-full rounded-lg"
+                className="w-full h-full rounded-lg mb-4 md:mb-0"
               />
             </div>
             {/* <div> */}
@@ -145,7 +149,7 @@ export default function ProductDetail() {
                 <br />A newly open boxed sneakers for sale.
               </div>
               <div
-                className="flex justify-between align-center items-middle md:flex-col lg:flex-row"
+                className="flex justify-between align-center items-middle flex-col md:flex-row"
                 style={{ marginLeft: 36, marginRight: 36, marginTop: 18 }}>
                 <button
                   style={{
@@ -154,7 +158,7 @@ export default function ProductDetail() {
                     paddingLeft: 34,
                     paddingRight: 34,
                   }}
-                  className="bg-orange-500 rounded text-white text-xs font-medium font-['Ubuntu']">
+                  className="bg-orange-500 rounded text-white text-xs font-medium font-['Ubuntu'] mb-4 md:mb-0">
                   <span>Message seller</span>
                 </button>
                 <button
@@ -271,8 +275,8 @@ export default function ProductDetail() {
 
             <div
               style={{ marginTop: 10 }}
-              className="w-full h-auto justify-between items-center inline-flex">
-              <div className="w-36 h-7 relative">
+              className="w-full h-auto justify-between items-center inline-flex flex-col md:flex-row">
+              <div className="w-36 h-7 relative mb-4 md:mb-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="148"
@@ -343,37 +347,37 @@ export default function ProductDetail() {
             </div>
 
             <Grid container rowSpacing={4} marginBottom={40}>
-              <Grid item xs={1.7}>
+              <Grid item xs={matches ? 1.7 : 6}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={1.7}>
+              <Grid item xs={matches ? 1.7 : 6}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={1.7}>
+              <Grid item xs={matches ? 1.7 : 6}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={1.7}>
+              <Grid item xs={matches ? 1.7 : 6}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={1.7}>
+              <Grid item xs={matches ? 1.7 : 6}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={1.7}>
+              <Grid item xs={matches ? 1.7 : 6}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={1.7}>
+              <Grid item xs={matches ? 1.7 : 6}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />

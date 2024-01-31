@@ -5,8 +5,12 @@ import ProductCard from "../Component/ProductCard";
 import SuggestedBusinessCard from "../Component/SuggestedBusinessCard";
 import { Grid } from "@mui/material";
 import MainLayout from "../Component/Layout/MainLayout";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Home() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     // <div>
     <MainLayout>
@@ -177,33 +181,33 @@ export default function Home() {
                 // style={{ marginTop: 5 }}
                 //   marginTop={5}
                 container
-                spacing={4}>
-                <Grid item xs={6} sm={12} md={6}>
+                spacing={matches ? 4 : 8}>
+                <Grid item xs={matches ? 6 : 12} sm={12} md={6}>
                   <SuggestedBusinessCard
                     img={require("../utils/assets/images/bus1.jpeg")}
                   />
                 </Grid>
-                <Grid item xs={6} sm={12} md={6}>
+                <Grid item xs={matches ? 6 : 12} sm={12} md={6}>
                   <SuggestedBusinessCard
                     img={require("../utils/assets/images/bus2.jpeg")}
                   />
                 </Grid>
-                <Grid item xs={6} sm={12} md={6}>
+                <Grid item xs={matches ? 6 : 12} sm={12} md={6}>
                   <SuggestedBusinessCard
                     img={require("../utils/assets/images/bus3.jpeg")}
                   />
                 </Grid>
-                <Grid item xs={6} sm={12} md={6}>
+                <Grid item xs={matches ? 6 : 12} sm={12} md={6}>
                   <SuggestedBusinessCard
                     img={require("../utils/assets/images/bus1.jpeg")}
                   />
                 </Grid>
-                <Grid item xs={6} sm={12} md={6}>
+                <Grid item xs={matches ? 6 : 12} sm={12} md={6}>
                   <SuggestedBusinessCard
                     img={require("../utils/assets/images/bus2.jpeg")}
                   />
                 </Grid>
-                <Grid item xs={6} sm={12} md={6}>
+                <Grid item xs={matches ? 6 : 12} sm={12} md={6}>
                   <SuggestedBusinessCard
                     img={require("../utils/assets/images/bus3.jpeg")}
                   />
