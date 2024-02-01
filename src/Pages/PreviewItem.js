@@ -1,17 +1,30 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function PreviewItem() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <div className="">
       <div
         className="flex justify-between items-center align-middle"
-        style={{
-          paddingLeft: 87,
-          paddingRight: 87,
-          paddingTop: 25,
-          paddingBottom: 25,
-        }}>
+        style={
+          matches
+            ? {
+                paddingLeft: 87,
+                paddingRight: 87,
+                paddingTop: 25,
+                paddingBottom: 25,
+              }
+            : {
+                paddingLeft: 20,
+                paddingRight: 20,
+                paddingTop: 25,
+                paddingBottom: 25,
+              }
+        }>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +44,10 @@ export default function PreviewItem() {
         </div>
 
         <div>
-          <span className="text-violet-900 text-4xl font-medium font-['Ubuntu']">
+          <span
+            className={`text-violet-900 ${
+              matches ? "text-4xl" : "text-2xl"
+            } font-medium font-['Ubuntu']`}>
             Preview item
           </span>
         </div>
@@ -41,7 +57,12 @@ export default function PreviewItem() {
       {/* line */}
       <div className="w-full h-px border border-black border-opacity-20" />
 
-      <main style={{ marginTop: 36, marginRight: 85, marginLeft: 85 }}>
+      <main
+        style={
+          matches
+            ? { marginTop: 36, marginRight: 85, marginLeft: 85 }
+            : { marginTop: 36, marginRight: 20, marginLeft: 20 }
+        }>
         <div className="h-screen">
           <img
             className="w-full h-full"
@@ -52,13 +73,22 @@ export default function PreviewItem() {
           <div
             className="w-full h-44 relative bg-violet-900 rounded-lg"
             style={{ marginTop: 25 }}>
-            <div className="left-[29px] top-[18px] absolute text-white text-opacity-80 text-xl font-medium font-['Ubuntu']">
+            <div
+              className={`left-[29px] top-[18px] absolute text-white text-opacity-80 ${
+                matches ? "text-xl" : "text-md"
+              } font-medium font-['Ubuntu']`}>
               Automobile
             </div>
-            <div className="left-[29px] top-[70px] absolute text-white text-3xl font-medium font-['Ubuntu']">
+            <div
+              className={`left-[29px] top-[70px] absolute text-white ${
+                matches ? "text-3xl" : "text-xl"
+              } font-medium font-['Ubuntu']`}>
               Toyota camry 07
             </div>
-            <div className="left-[29px] top-[128px] absolute text-white text-opacity-80 text-2xl font-normal font-['Ubuntu']">
+            <div
+              className={`left-[29px] top-[128px] absolute text-white text-opacity-80 ${
+                matches ? "text-2xl" : "text-lg"
+              } font-normal font-['Ubuntu']`}>
               Sale location : Lagos NG
             </div>
             <div className="left-[869px] top-[21px] absolute text-white text-3xl font-medium font-['Ubuntu']">
@@ -71,63 +101,99 @@ export default function PreviewItem() {
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/preview2.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/preview3.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/auto1.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/auto2.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/auto3.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/auto4.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/auto5.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/auto6.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
               <Grid item xs={1.33}>
                 <img
                   src={require("../utils/assets/images/auto7.jpeg")}
-                  style={{ height: "60%" }}
+                  style={
+                    matches
+                      ? { height: "60%" }
+                      : { height: "100%", width: "100%" }
+                  }
                   className="border border-neutral-100 border-opacity-20 w-full"
                 />
               </Grid>
@@ -136,14 +202,17 @@ export default function PreviewItem() {
           {/* form */}
           <div className="flex flex-col" style={{ marginBottom: 87 }}>
             <div style={{ marginBottom: 15 }}>
-              <span className="text-black text-3xl font-medium font-['Ubuntu']">
+              <span
+                className={`text-black ${
+                  matches ? "text-3xl" : "text-xl"
+                } font-medium font-['Ubuntu']`}>
                 Desciption
               </span>
             </div>
 
             <textarea
               className="w-full p-4 rounded-lg border border-neutral-100"
-              rows={4}></textarea>
+              rows={matches ? 4 : 2}></textarea>
           </div>
           {/* button */}
           <div

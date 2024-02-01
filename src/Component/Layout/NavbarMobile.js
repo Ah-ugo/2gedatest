@@ -7,7 +7,7 @@ export default function NavbarMobile() {
 
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <header className="p-4 bg-white fixed w-full z-10 top-0">
+    <header className="p-4 bg-white fixed w-full top-0" style={{ zIndex: 1 }}>
       <div className="container flex justify-between h-16 mx-auto">
         <div className="flex align-middle items-center">
           <button onClick={toggle} className="flex justify-start p-4 md:hidden">
@@ -78,7 +78,8 @@ export default function NavbarMobile() {
           isOpen
             ? "block absolute fixed z-1 top-full left-0 w-full md:hidden transition-all duration-300 ease-in-out transform translate-x-0 overflow-hidden"
             : "hidden"
-        }`}>
+        }`}
+        style={{ zIndex: 10 }}>
         <LeftSider />
       </div>
     </header>

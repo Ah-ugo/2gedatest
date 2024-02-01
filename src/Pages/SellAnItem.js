@@ -1,17 +1,30 @@
 import React from "react";
 import "../../src/sellItem.css";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function SellAnItem() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <div>
       <div
         className="flex justify-between items-center align-middle"
-        style={{
-          paddingLeft: 87,
-          paddingRight: 87,
-          paddingTop: 25,
-          paddingBottom: 25,
-        }}>
+        style={
+          matches
+            ? {
+                paddingLeft: 87,
+                paddingRight: 87,
+                paddingTop: 25,
+                paddingBottom: 25,
+              }
+            : {
+                paddingLeft: 20,
+                paddingRight: 20,
+                paddingTop: 25,
+                paddingBottom: 25,
+              }
+        }>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +44,10 @@ export default function SellAnItem() {
         </div>
 
         <div>
-          <span className="text-violet-900 text-4xl font-medium font-['Ubuntu']">
+          <span
+            className={`text-violet-900 ${
+              matches ? "text-4xl" : "text-2xl"
+            } font-medium font-['Ubuntu']`}>
             Sell an item
           </span>
         </div>
@@ -42,8 +58,16 @@ export default function SellAnItem() {
       <div className="w-full h-px border border-black border-opacity-20" />
 
       {/* main container */}
-      <main style={{ marginTop: 36, marginRight: 85, marginLeft: 85 }}>
-        <span className="text-black text-2xl font-medium font-['Ubuntu']">
+      <main
+        style={
+          matches
+            ? { marginTop: 36, marginRight: 85, marginLeft: 85 }
+            : { marginTop: 36, marginRight: 20, marginLeft: 20 }
+        }>
+        <span
+          className={`text-black ${
+            matches ? "text-2xl" : "text-lg"
+          } font-medium font-['Ubuntu']`}>
           Sell any item in 3 simple steps
         </span>
         {/* form */}
@@ -52,48 +76,81 @@ export default function SellAnItem() {
             type="text"
             placeholder="Set product category"
             placeholderTextColor="#000"
-            style={{
-              paddingTop: 26,
-              paddingBottom: 26,
+            style={
+              matches
+                ? {
+                    paddingTop: 26,
+                    paddingBottom: 26,
 
-              marginBottom: 26,
-            }}
-            className="w-full pl-6 text-black text-opacity-80 text-2xl font-normal font-['Ubuntu']  rounded-lg border border-neutral-100 justify-start items-center inline-flex"
+                    marginBottom: 26,
+                  }
+                : {
+                    paddingTop: 10,
+                    paddingBottom: 10,
+
+                    marginBottom: 26,
+                  }
+            }
+            className={`w-full pl-6 text-black text-opacity-80 ${
+              matches ? "text-2xl" : "text-lg"
+            } font-normal font-['Ubuntu']  rounded-lg border border-neutral-100 justify-start items-center inline-flex`}
           />
 
           <textarea
             style={{ marginBottom: 26 }}
             placeholder="Product title"
-            rows={4}
-            className="w-full h-32 pl-6 pt-6 rounded-lg border border-neutral-100 justify-start items-center inline-flex text-black text-opacity-80 text-2xl font-normal font-['Ubuntu']"></textarea>
+            rows={matches ? 4 : 2}
+            className={`w-full pl-6 pt-6 rounded-lg border border-neutral-100 justify-start items-center inline-flex text-black text-opacity-80 ${
+              matches ? "text-2xl" : "text-lg"
+            } font-normal font-['Ubuntu']`}></textarea>
 
           <textarea
             style={{ marginBottom: 26 }}
             placeholder="Description"
-            rows={6}
-            className="w-full h-32 pl-6 pt-6 rounded-lg border border-neutral-100 justify-start items-center inline-flex text-black text-opacity-80 text-2xl font-normal font-['Ubuntu']"></textarea>
+            rows={matches ? 6 : 3}
+            className={`w-full pl-6 pt-6 rounded-lg border border-neutral-100 justify-start items-center inline-flex text-black text-opacity-80 ${
+              matches ? "text-2xl" : "text-lg"
+            } font-normal font-['Ubuntu']`}></textarea>
 
           <input
             type="text"
             placeholder="Set sale location"
-            style={{
-              paddingTop: 26,
-              paddingBottom: 26,
+            style={
+              matches
+                ? {
+                    paddingTop: 26,
+                    paddingBottom: 26,
 
-              marginBottom: 26,
-            }}
-            className="w-full pl-6 text-black text-opacity-80 text-2xl font-normal font-['Ubuntu']  rounded-lg border border-neutral-100 justify-start items-center inline-flex"
+                    marginBottom: 26,
+                  }
+                : {
+                    paddingTop: 10,
+                    paddingBottom: 10,
+
+                    marginBottom: 26,
+                  }
+            }
+            className={`w-full pl-6 text-black text-opacity-80 ${
+              matches ? "text-2xl" : "text-lg"
+            } font-normal font-['Ubuntu']  rounded-lg border border-neutral-100 justify-start items-center inline-flex`}
           />
           <div style={{ marginBottom: 26 }}>
             <div
               className="w-full pl-6 rounded-lg border border-neutral-100 justify-start align-middle items-center inline-flex"
-              style={{ paddingTop: 26, paddingBottom: 26 }}>
+              style={
+                matches
+                  ? { paddingTop: 26, paddingBottom: 26 }
+                  : { paddingTop: 10, paddingBottom: 10 }
+              }>
               <div className="flex align-middle items-center justify-start gap-4">
-                <span className="text-black text-opacity-80 text-2xl font-normal font-['Ubuntu']">
+                <span
+                  className={`text-black text-opacity-80 ${
+                    matches ? "text-2xl" : "text-lg"
+                  } font-normal font-['Ubuntu']`}>
                   Item price
                 </span>
 
-                <select style={{ padding: 7 }}>
+                <select style={matches ? { padding: 7 } : { padding: 4 }}>
                   <option>$</option>
                 </select>
               </div>

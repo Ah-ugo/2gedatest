@@ -1,17 +1,30 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function UploadImages() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <div>
       <div
         className="flex justify-between items-center align-middle"
-        style={{
-          paddingLeft: 87,
-          paddingRight: 87,
-          paddingTop: 25,
-          paddingBottom: 25,
-        }}>
+        style={
+          matches
+            ? {
+                paddingLeft: 87,
+                paddingRight: 87,
+                paddingTop: 25,
+                paddingBottom: 25,
+              }
+            : {
+                paddingLeft: 20,
+                paddingRight: 20,
+                paddingTop: 25,
+                paddingBottom: 25,
+              }
+        }>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +44,10 @@ export default function UploadImages() {
         </div>
 
         <div>
-          <span className="text-violet-900 text-4xl font-medium font-['Ubuntu']">
+          <span
+            className={`text-violet-900 ${
+              matches ? "text-4xl" : "text-2xl"
+            } font-medium font-['Ubuntu']`}>
             Upload images
           </span>
         </div>
@@ -42,18 +58,29 @@ export default function UploadImages() {
       <div className="w-full h-px border border-black border-opacity-20" />
 
       {/* main content */}
-      <main style={{ marginTop: 36, marginRight: 85, marginLeft: 85 }}>
+      <main
+        style={
+          matches
+            ? { marginTop: 36, marginRight: 85, marginLeft: 85 }
+            : { marginTop: 36, marginRight: 20, marginLeft: 20 }
+        }>
         <div className="flex flex-col" style={{ marginBottom: 45 }}>
-          <span className="text-black text-2xl font-medium font-['Ubuntu']">
+          <span
+            className={`text-black ${
+              matches ? "text-2xl" : "text-lg"
+            } font-medium font-['Ubuntu']`}>
             You can add up to 10 images
           </span>
-          <span className="text-black text-opacity-80 text-2xl font-normal font-['Ubuntu']">
+          <span
+            className={`text-black text-opacity-80 ${
+              matches ? "text-2xl" : "text-lg"
+            } font-normal font-['Ubuntu']`}>
             The first image is the cover image
           </span>
         </div>
         <div style={{ marginBottom: 90 }}>
           <Grid container spacing={4}>
-            <Grid item xs={6}>
+            <Grid item xs={matches ? 6 : 12}>
               <div className="w-full h-72 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +95,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={matches ? 6 : 12}>
               <div className="w-full h-72 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +110,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +125,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +140,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +155,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +170,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +185,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +200,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +215,7 @@ export default function UploadImages() {
                 </svg>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={matches ? 3 : 6}>
               <div className="w-full h-40 bg-neutral-100 border border-neutral-100 border-opacity-20 justify-center items-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
