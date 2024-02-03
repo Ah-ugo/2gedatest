@@ -2,8 +2,8 @@ import React from "react";
 
 export default function CartItemCard({ img, name, price, location }) {
   return (
-    <div style={{ marginBottom: 8 }}>
-      <div className="w-full h-auto justify-between items-center gap-8 inline-flex">
+    <div style={{ marginBottom: 10 }}>
+      <div className="w-full h-auto justify-between items-center gap-2 inline-flex flex-col lg:flex-row xl:flex-row lg:gap-8 xl:gap-8">
         <div className="justify-between items-center gap-1.5 flex">
           <img className="w-11 h-11 rounded" src={img} />
           <div className="flex-col justify-start items-start gap-0.5 inline-flex">

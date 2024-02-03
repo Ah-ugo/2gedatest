@@ -542,6 +542,7 @@ export default function Category() {
                 />
               </Grid>
               <Grid
+                item
                 xs={
                   matches
                     ? 6

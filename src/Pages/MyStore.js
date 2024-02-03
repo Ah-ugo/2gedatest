@@ -542,6 +542,7 @@ export default function MyStore() {
                 />
               </Grid>
               <Grid
+                item
                 xs={
                   matches
                     ? 6
