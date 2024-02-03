@@ -9,7 +9,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function MyStore() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matches2 = useMediaQuery(theme.breakpoints.only("md"));
+  const isBetweenMd = useMediaQuery(theme.breakpoints.between(1312, 1412));
+  const isBetweenMd2 = useMediaQuery(theme.breakpoints.between(600, 1311));
   return (
     <MainLayout>
       <Mainbody>
@@ -69,98 +72,238 @@ export default function MyStore() {
 
             {/* product section */}
             <Grid container rowSpacing={2} columnSpacing={3} marginTop={"15px"}>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
@@ -177,98 +320,237 @@ export default function MyStore() {
                 </div>
               </Grid>
 
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
@@ -284,98 +566,238 @@ export default function MyStore() {
                   />
                 </div>
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
@@ -391,98 +813,238 @@ export default function MyStore() {
                   />
                 </div>
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot1.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot2.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot3.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot4.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot5.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot6.jpeg")}
                   name={"Semi detached duplex"}
                   price={"#200,000"}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7142857142857 : 6}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../../src/utils/assets/images/hot7.jpeg")}
                   name={"Semi detached duplex"}

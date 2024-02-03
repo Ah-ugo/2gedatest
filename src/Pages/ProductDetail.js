@@ -12,8 +12,8 @@ export default function ProductDetail() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const matches2 = useMediaQuery(theme.breakpoints.only("md"));
-  const isBetweenMd = useMediaQuery(theme.breakpoints.between(690, 1412));
-  const isBetweenMd2 = useMediaQuery(theme.breakpoints.between(600, 1216));
+  const isBetweenMd = useMediaQuery(theme.breakpoints.between(1312, 1412));
+  const isBetweenMd2 = useMediaQuery(theme.breakpoints.between(600, 1311));
   return (
     <MainLayout>
       <Mainbody>
@@ -152,7 +152,7 @@ export default function ProductDetail() {
                 <br />A newly open boxed sneakers for sale.
               </div>
               <div
-                className="flex justify-between align-center items-middle flex-col md:flex-row"
+                className="flex justify-between align-center items-middle flex-col lg:flex-row"
                 style={{ marginLeft: 36, marginRight: 36, marginTop: 18 }}>
                 <button
                   style={{
@@ -161,7 +161,7 @@ export default function ProductDetail() {
                     paddingLeft: 34,
                     paddingRight: 34,
                   }}
-                  className="bg-orange-500 rounded text-white text-xs font-medium font-['Ubuntu'] mb-4 md:mb-0">
+                  className="bg-orange-500 rounded text-white text-xs font-medium font-['Ubuntu'] mb-4 lg:mb-0 xl:mr-4">
                   <span>Message seller</span>
                 </button>
                 <button
@@ -350,37 +350,107 @@ export default function ProductDetail() {
             </div>
 
             <Grid container rowSpacing={4} marginBottom={40}>
-              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
+              <Grid
+                item
+                xs={
+                  matches
+                    ? 6
+                    : isBetweenMd
+                    ? 2
+                    : isBetweenMd2
+                    ? 3
+                    : 1.7142857142857
+                }>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
