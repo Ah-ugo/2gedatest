@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { GoHome } from "react-icons/go";
 
 export default function LeftSider() {
+  const [activeLink, setActiveLink] = useState("/"); // Initialize with the default active link
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
   return (
     <div
       style={{ backgroundColor: "#4F0DA3", color: "white" }}
@@ -14,39 +19,60 @@ export default function LeftSider() {
             class="flex flex-col py-4 mt-[20px] md:mt-[70.56px]"
             style={{ marginTop: "" }}>
             <li>
-              <a
-                href="#"
-                class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
+              <Link
+                to="/"
+                onClick={() => handleLinkClick("/")}
+                class={`${
+                  activeLink === "/"
+                    ? "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800"
+                    : "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800"
+                }`}>
                 <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
                     height="25"
                     viewBox="0 0 32 33"
-                    fill="none">
+                    fill={"white"}>
                     <path
                       d="M19 26.5586V20.5586C19 20.2934 18.8946 20.039 18.7071 19.8515C18.5196 19.664 18.2652 19.5586 18 19.5586H14C13.7348 19.5586 13.4804 19.664 13.2929 19.8515C13.1054 20.039 13 20.2934 13 20.5586V26.5586C13 26.8238 12.8946 27.0782 12.7071 27.2657C12.5196 27.4533 12.2652 27.5586 12 27.5586H6C5.73478 27.5586 5.48043 27.4533 5.29289 27.2657C5.10536 27.0782 5 26.8238 5 26.5586V14.9961C5.00224 14.8577 5.03215 14.7212 5.08796 14.5945C5.14378 14.4679 5.22437 14.3537 5.325 14.2586L15.325 5.17112C15.5093 5.00247 15.7501 4.90894 16 4.90894C16.2499 4.90894 16.4907 5.00247 16.675 5.17112L26.675 14.2586C26.7756 14.3537 26.8562 14.4679 26.912 14.5945C26.9679 14.7212 26.9978 14.8577 27 14.9961V26.5586C27 26.8238 26.8946 27.0782 26.7071 27.2657C26.5196 27.4533 26.2652 27.5586 26 27.5586H20C19.7348 27.5586 19.4804 27.4533 19.2929 27.2657C19.1054 27.0782 19 26.8238 19 26.5586Z"
-                      fill="white"
+                      stroke="#C47EFB"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill={activeLink === "/" ? "white" : "none"}
                     />
                   </svg>
                 </span>
                 <span
                   class=""
-                  style={{
-                    color: "#FFF",
+                  style={
+                    activeLink === "/"
+                      ? {
+                          color: "#FFF",
 
-                    fontFamily: "Ubuntu",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: "500",
-                  }}>
+                          fontFamily: "Ubuntu",
+                          fontSize: "16px",
+                          fontStyle: "normal",
+                          fontWeight: "500",
+                        }
+                      : {
+                          color: "#FFF",
+
+                          fontFamily: "Ubuntu",
+                          fontSize: "16px",
+                          fontStyle: "normal",
+                          fontWeight: "300",
+                        }
+                  }>
                   Home
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                onClick={() => handleLinkClick("/detail")}
+                to="/detail"
                 class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
                 <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white">
                   <svg
@@ -61,6 +87,7 @@ export default function LeftSider() {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
+                      fill={activeLink === "/detail" ? "white" : "none"}
                     />
                     <path
                       d="M24.5 15.0586C25.6647 15.0567 26.8137 15.3269 27.8554 15.8478C28.8972 16.3686 29.8028 17.1257 30.5 18.0586"
@@ -68,6 +95,7 @@ export default function LeftSider() {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
+                      fill={activeLink === "/detail" ? "white" : "none"}
                     />
                     <path
                       d="M1.5 18.0586C2.19725 17.1257 3.10285 16.3686 4.14457 15.8478C5.1863 15.3269 6.33532 15.0567 7.5 15.0586"
@@ -75,6 +103,7 @@ export default function LeftSider() {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
+                      fill={activeLink === "/detail" ? "white" : "none"}
                     />
                     <path
                       d="M8.7998 27.5586C9.45833 26.2099 10.4824 25.0734 11.7554 24.2783C13.0283 23.4833 14.499 23.0618 15.9998 23.0618C17.5006 23.0618 18.9713 23.4833 20.2442 24.2783C21.5172 25.0734 22.5413 26.2099 23.1998 27.5586"
@@ -82,6 +111,7 @@ export default function LeftSider() {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
+                      fill={activeLink === "/detail" ? "white" : "none"}
                     />
                     <path
                       d="M7.50015 15.0586C6.74096 15.0594 5.99722 14.8441 5.35584 14.4378C4.71446 14.0316 4.20193 13.4513 3.87814 12.7646C3.55434 12.0779 3.43266 11.3132 3.5273 10.56C3.62194 9.80668 3.929 9.0959 4.4126 8.51065C4.89619 7.9254 5.53636 7.48987 6.25829 7.25493C6.98022 7.02 7.75411 6.99537 8.48952 7.18392C9.22493 7.37247 9.8915 7.76642 10.4113 8.31973C10.9312 8.87304 11.2828 9.56286 11.4252 10.3086"
@@ -89,6 +119,7 @@ export default function LeftSider() {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
+                      fill={activeLink === "/detail" ? "white" : "none"}
                     />
                     <path
                       d="M20.5752 10.3086C20.7175 9.56286 21.0692 8.87304 21.589 8.31973C22.1089 7.76642 22.7754 7.37247 23.5108 7.18392C24.2462 6.99537 25.0201 7.02 25.7421 7.25493C26.464 7.48987 27.1042 7.9254 27.5878 8.51065C28.0714 9.0959 28.3784 9.80668 28.4731 10.56C28.5677 11.3132 28.446 12.0779 28.1222 12.7646C27.7984 13.4513 27.2859 14.0316 26.6445 14.4378C26.0031 14.8441 25.2594 15.0594 24.5002 15.0586"
@@ -96,6 +127,7 @@ export default function LeftSider() {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
+                      fill={activeLink === "/detail" ? "white" : "none"}
                     />
                   </svg>
                 </span>
@@ -111,7 +143,7 @@ export default function LeftSider() {
                   }}>
                   Connect
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <a

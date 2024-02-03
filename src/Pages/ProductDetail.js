@@ -10,7 +10,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function ProductDetail() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matches2 = useMediaQuery(theme.breakpoints.only("md"));
+  const isBetweenMd = useMediaQuery(theme.breakpoints.between(690, 1412));
+  const isBetweenMd2 = useMediaQuery(theme.breakpoints.between(600, 1216));
   return (
     <MainLayout>
       <Mainbody>
@@ -347,37 +350,37 @@ export default function ProductDetail() {
             </div>
 
             <Grid container rowSpacing={4} marginBottom={40}>
-              <Grid item xs={matches ? 1.7 : 6}>
+              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7 : 6}>
+              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7 : 6}>
+              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7 : 6}>
+              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7 : 6}>
+              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7 : 6}>
+              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
               </Grid>
-              <Grid item xs={matches ? 1.7 : 6}>
+              <Grid item xs={matches ? 6 : isBetweenMd ? 2 : 1.7}>
                 <ProductCard
                   img={require("../utils/assets/images/peopleView.jpeg")}
                 />
